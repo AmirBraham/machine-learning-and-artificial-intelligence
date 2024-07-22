@@ -56,7 +56,7 @@ Create music using a recurrent neural network in Python using the Keras library.
 
 For this tutorial, it’s better to use a single instrument instead of multiple instruments.
 
-![Music%20generation%20with%20LSTM%207e34e24af9d5453da2d2d64f109f16e6/Untitled.png](Music%20generation%20with%20LSTM%207e34e24af9d5453da2d2d64f109f16e6/Untitled.png)
+<img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*sM3FeKwC-SD66FCKzoExDQ.jpeg" />
 
 Here, instead of “apple,” “orange,” etc., we have “C1,” “A2.C3.E3,” etc.
 
