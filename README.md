@@ -1,8 +1,6 @@
 # Music generation with LSTM
 
-# Music Generation with LSTM
-
-Based on this GitHub repository: [Classical-Piano-Composer]
+Based on this GitHub repository: [Classical-Piano-Composer](https://github.com/Skuldur/Classical-Piano-Composer)
 
 ## Requirements
 
