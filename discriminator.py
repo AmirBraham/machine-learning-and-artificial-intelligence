@@ -11,7 +11,7 @@ class Block(nn.Module):
         self.conv = nn.Sequential(
             nn.Conv2d(in_channels=in_channels,out_channels=out_channels,kernel_size=4, stride=stride,padding=1,bias=True,padding_mode="reflect"),
             nn.InstanceNorm2d(num_features=out_channels) if should_use_instance_norm else nn.Identity(),
-            nn.LeakyReLU()
+            nn.LeakyReLU(0.2)
         )
 
     def forward(self,x):
@@ -24,7 +24,7 @@ class Discriminator(nn.Module):
             Block(in_channels=3,out_channels=64,stride=2,should_use_instance_norm=False),
             Block(in_channels=64,out_channels=128,stride=2),
             Block(in_channels=128,out_channels=256,stride=2),
-            Block(in_channels=256,out_channels=512,stride=2),
+            Block(in_channels=256,out_channels=512,stride=1),
             Block(in_channels=512,out_channels=1,stride=1),
                 ]
         self.model = nn.Sequential(*layers)
@@ -34,11 +34,11 @@ class Discriminator(nn.Module):
     
     
 def test():
-    x = torch.randn((1,3,256,256))
+    x = torch.randn((5,3,256,256))
     model = Discriminator()
     output =  model(x)
     print(model)
-    print(output)
+    print(output.shape)
     
 if __name__ == "__main__":
     test()
